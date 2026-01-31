@@ -1,0 +1,22 @@
+[
+  {
+    "feature":"volatility_5",
+    "importance":0.2587320404
+  },
+  {
+    "feature":"volatility_10",
+    "importance":0.2546785062
+  },
+  {
+    "feature":"volume_change",
+    "importance":0.2106945189
+  },
+  {
+    "feature":"ma_10",
+    "importance":0.1402677196
+  },
+  {
+    "feature":"ma_5",
+    "importance":0.1356272149
+  }
+]

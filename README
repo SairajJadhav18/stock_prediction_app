@@ -1,0 +1,176 @@
+## SAIRAJ JADHAV, 
+
+## Stock Return Prediction Dashboard
+
+This project is an interactive stock analysis dashboard that I built to use machine learning and historical price data to analyze short term stock trends. The goal of the project is not to predict exact prices, but to interpret directional signals, uncertainty, and confidence in a way that is clear and honest.
+
+The dashboard is built using Python, Streamlit, Plotly, and Pandas, and supports stocks from multiple countries and markets.
+
+## Explanation of what my project does
+
+This dashboard allows a user to:
+
+Select stocks or ETFs from different markets
+
+Run a machine learning model on demand
+Visualize historical price trends
+Identify peaks and drops in stock prices
+View model performance metrics
+See which features mattered most to the model
+
+Understand confidence through a speedometer style gauge
+
+The focus is on interpretability and clarity, not overconfident predictions.
+
+## Various Markets and Stock Option + You can add more 
+
+The dashboard currently supports:
+
+US Stocks
+MSFT, AAPL, GOOGL, AMZN, TSLA, META, NVDA, NFLX
+
+Canadian Stocks
+SHOP, RY, TD, BNS, BMO, ENB, CNQ, CP, CNR, SU
+
+Indian Stocks
+RELIANCE.NS, TCS.NS, INFY.NS, HDFCBANK.NS, ICICIBANK.NS, SBIN.NS, HINDUNILVR.NS, ITC.NS, LT.NS, BHARTIARTL.NS
+
+Canadian ETFs
+XIU.TO, VCN.TO, VFV.TO, XIC.TO, ZCN.TO
+
+## Why I picked the Machine learning approach
+
+The model is designed to predict next day return direction, not exact price.
+
+Feature engineering includes:
+Daily returns
+Lagged returns (1 day, 2 day, 5 day)
+Moving averages (5 day and 10 day)
+Short term volatility
+Day of week effect
+Target
+Next day return direction
+Model output
+Mean Absolute Error
+R2 Score
+Directional Accuracy
+
+Directional accuracy is used as a key input for interpretation and confidence.
+
+## Price trend visualization
+
+The dashboard includes an interactive line chart showing:
+
+Historical closing prices
+
+Detected price peaks (local highs)
+
+Detected price drops (local lows)
+
+## Model interpretation section
+
+Instead of making hard predictions, the dashboard includes a plain language 
+interpretation written so that it is easy for even beginners to understand
+
+The interpretation is based on:
+
+Recent price movement
+Model directional accuracy
+Market volatility
+
+The outlook is categorized as:
+
+Bullish
+Bearish
+Uncertain
+
+Each category explains:
+
+What the data is showing
+Why the model leans that way
+Why uncertainty still exists
+
+
+## Confidence meter (speedometer style)
+
+To visually communicate uncertainty, the dashboard includes a speedometer style confidence gauge.
+
+The confidence score is calculated using:
+Model directional accuracy
+Recent volatility
+Whether signals agree or conflict
+
+The gauge shows:
+
+A score from 0 to 100
+Color zones for low, medium, and high confidence
+A clear visual indicator instead of false precision
+
+## Dashboard structure
+
+The dashboard is built using Streamlit and includes:
+
+Market selection
+
+Stock or ETF selection
+
+Run model button
+
+Stock overview
+
+Price trend chart with peaks and drops
+
+Model interpretation section
+
+Confidence speedometer
+
+Model performance metrics
+
+Feature importance chart
+
+Session state is used to manage reruns and user flow cleanly.
+
+## How to run the project
+Install dependencies
+pip install streamlit pandas plotly yfinance scikit-learn
+
+Run the app
+python -m streamlit run app.py
+
+
+The app will open in your browser at:
+
+http://localhost:8501
+
+
+## Important note
+
+This project is created by me only for educational purposes.
+It does not provide financial advice or guaranteed predictions.
+
+The focus is on learning:
+
+Data processing
+
+Feature engineering
+
+Model evaluation
+
+Visualization
+
+Communicating uncertainty clearly
+
+
+## Future improvements Coming Soon 😁
+
+Possible future enhancements include:
+
+Comparing multiple stocks side by side
+
+Medium term outlook analysis
+
+Exporting dashboard snapshots
+
+Confidence breakdown by factor
+
+Automated data refresh
