@@ -150,3 +150,9 @@ websockets==16.0
 Werkzeug==2.3.7
 widgetsnbextension==4.0.14
 yfinance==1.1.0
+streamlit
+pandas
+plotly
+scikit-learn
+yfinance
+numpy
